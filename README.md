@@ -14,6 +14,24 @@ Strona została zbudowana w nowoczesnej, modułowej architekturze opartej na czy
 - [`testy.html`](testy.html) – Centrum testów psychologicznych: interaktywny quiz, wskaźniki punktacji i eksport do PDF.
 - [`kontakt.html`](kontakt.html) – Podstrona bezpośredniego kontaktu, formularz wiadomości i dane teleadresowe.
 
+### 🧩 Podstrony generowane (`tools/build.py`)
+Strona usługi, strony „W czym pomagam”, opisy testów i artykuły poradnika powstają z fragmentów w [`tools/content/`](tools/content) i wspólnego szablonu. **Nie edytuj wygenerowanych plików ręcznie** – zmień fragment i uruchom:
+
+```bash
+python tools/build.py
+```
+
+Skrypt zapisuje podstrony (katalog główny i `poradnik/`), odświeża `sitemap.xml`, `llms.txt` oraz mapę linków w stopkach stron pisanych ręcznie.
+
+- **Nowy artykuł:** skopiuj dowolny plik `tools/content/a*.html`, zmień pola w nagłówku `<!--META {...} -->` (`slug`, `title`, `description`, `h1`, `lead`, `card`, `updated`, `faq`, `related`) i treść. Linki w treści pisz względem katalogu głównego (np. `href="natlok-mysli.html"`).
+- **Zasada treści:** pierwsze dwa zdania (`lead`) odpowiadają na pytanie z tytułu; fakty i liczby zamiast przymiotników; źródła na końcu.
+- **Po wdrożeniu:** `python tools/indexnow.py` zgłasza adresy z mapy strony do Binga (IndexNow).
+
+### 🔎 Widoczność w wyszukiwarkach i asystentach AI
+- [`robots.txt`](robots.txt) – jawna zgoda dla wyszukiwarek i botów wyszukiwania AI (m.in. `OAI-SearchBot`, od którego zależy obecność w wyszukiwaniu ChatGPT); boty trenujące modele (`GPTBot`, `ClaudeBot`, `Google-Extended` i inne) oraz katalogi robocze są zablokowane.
+- [`sitemap.xml`](sitemap.xml), [`llms.txt`](llms.txt) – generowane przez `tools/build.py`.
+- Dane strukturalne schema.org (JSON-LD) na każdej stronie: `ProfessionalService`, `Person`, `Service`, `FAQPage`, `Article`, `BreadcrumbList`.
+
 ### 🎨 Style CSS (`/css/`)
 Plik główny [`css/style.css`](css/style.css) importuje dedykowane, lekkie moduły:
 - [`css/variables.css`](css/variables.css) – Zmienne CSS, paleta barw (Brand Blue, Orange, Yellow), cienie, gradienty.
@@ -23,6 +41,7 @@ Plik główny [`css/style.css`](css/style.css) importuje dedykowane, lekkie modu
 - [`css/sections.css`](css/sections.css) – Sekcje strony głównej (Hero, O mnie, Cennik, FAQ) i reguły RWD.
 - [`css/tests.css`](css/tests.css) – Kafelki testów, widok pytań quizu, okrągłe wskaźniki wyniku, styl raportu PDF.
 - [`css/contact.css`](css/contact.css) – Kafelki kontaktowe, formularz i pola tekstowe.
+- [`css/article.css`](css/article.css) – Układ podstron treściowych (okruszki, ramka z odpowiedzią, tabele, FAQ, stopka z mapą linków).
 - [`css/footer.css`](css/footer.css) – Stopka strony i globalne media queries.
 
 ### 🖼️ Grafiki (`/images/`)

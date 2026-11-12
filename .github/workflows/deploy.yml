@@ -25,10 +25,23 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      # Publikujemy tylko stronę: bez kopii projektowych, plików źródłowych i narzędzi.
+      - name: Prepare site
+        run: |
+          mkdir _site
+          rsync -a ./ _site/ \
+            --exclude _site \
+            --exclude '.*' \
+            --exclude project \
+            --exclude uploads \
+            --exclude tools \
+            --exclude README.md \
+            --exclude GEMINI.md
+          test -f _site/index.html && test -f _site/CNAME && test -f _site/robots.txt
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: '_site'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

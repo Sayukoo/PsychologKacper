@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap">
-  <link rel="stylesheet" href="css/style.css?v=3.1">
+  <link rel="stylesheet" href="css/style.css?v=4.0">
   <link rel="stylesheet" href="css/materials.css?v=3.1">
 </head>
 <body style="min-height: 100vh; display: flex; flex-direction: column;">
@@ -36,12 +36,13 @@
         <span class="brand-logo">KK</span>
         <span class="brand-text">Kacper Kulesza <span class="dot">·</span> psycholog</span>
       </a>
-      <nav class="nav-links">
+      <nav class="nav-links" aria-label="Główna nawigacja">
         <a href="index.html#o-mnie" class="nav-link">O mnie</a>
+        <a href="index.html#w-czym-pomagam" class="nav-link">W czym pomagam</a>
         <a href="index.html#cennik" class="nav-link">Cennik</a>
-        <a href="materialy.html" class="nav-link active">Materiały</a>
         <a href="testy.html" class="nav-link">Testy</a>
-        <a href="index.html#faq" class="nav-link">FAQ</a>
+        <a href="poradnik/" class="nav-link">Poradnik</a>
+        <a href="materialy.html" class="nav-link active">Materiały</a>
         <a href="kontakt.html" class="nav-link">Kontakt</a>
       </nav>
       <a href="https://calendly.com/kacperkulesza/15min" target="_blank" rel="noopener" class="btn-cta desktop-nav-cta">
@@ -71,7 +72,7 @@
       <button id="mobile-drawer-close" class="mobile-drawer-close" aria-label="Zamknij menu">✕</button>
     </div>
 
-    <nav class="mobile-nav-links">
+    <nav class="mobile-nav-links" aria-label="Nawigacja mobilna">
       <a href="index.html" class="mobile-nav-link">
         <span>Strona główna</span>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"></path></svg>
@@ -80,16 +81,24 @@
         <span>O mnie</span>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"></path></svg>
       </a>
+      <a href="index.html#w-czym-pomagam" class="mobile-nav-link">
+        <span>W czym pomagam</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"></path></svg>
+      </a>
       <a href="index.html#cennik" class="mobile-nav-link">
         <span>Cennik</span>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"></path></svg>
       </a>
-      <a href="materialy.html" class="mobile-nav-link active">
-        <span>Darmowe materiały</span>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"></path></svg>
-      </a>
       <a href="testy.html" class="mobile-nav-link">
         <span>Testy psychologiczne</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"></path></svg>
+      </a>
+      <a href="poradnik/" class="mobile-nav-link">
+        <span>Poradnik</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"></path></svg>
+      </a>
+      <a href="materialy.html" class="mobile-nav-link active">
+        <span>Darmowe materiały</span>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"></path></svg>
       </a>
       <a href="index.html#faq" class="mobile-nav-link">
@@ -247,6 +256,50 @@
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
+      <!-- foot-sitemap:start (generowane przez tools/build.py) -->
+      <nav class="foot-sitemap" aria-label="Mapa strony">
+        <div>
+          <h3>Konsultacje</h3>
+          <ul>
+            <li><a href="konsultacja-psychologiczna-online.html">Konsultacja psychologiczna online</a></li>
+            <li><a href="index.html#cennik">Cennik</a></li>
+            <li><a href="index.html#kontakt">Umów bezpłatne 15 minut</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>W czym pomagam</h3>
+          <ul>
+            <li><a href="natlok-mysli.html">Natłok myśli i zamartwianie się</a></li>
+            <li><a href="trudna-decyzja.html">Trudna decyzja</a></li>
+            <li><a href="wypalenie-zawodowe.html">Wypalenie zawodowe</a></li>
+            <li><a href="konflikt-w-pracy-i-relacji.html">Konflikt w pracy lub w relacji</a></li>
+            <li><a href="poczucie-utkniecia.html">Poczucie utknięcia</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Testy</h3>
+          <ul>
+            <li><a href="testy.html">Wszystkie testy</a></li>
+            <li><a href="test-depresja-phq9.html">Test na depresję PHQ-9</a></li>
+            <li><a href="test-lek-gad7.html">Test na lęk GAD-7</a></li>
+            <li><a href="test-dobrostan-who5.html">Test samopoczucia WHO-5</a></li>
+            <li><a href="test-adhd-asrs.html">Test na ADHD u dorosłych (ASRS)</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Poradnik</h3>
+          <ul>
+            <li><a href="poradnik/psycholog-psychoterapeuta-psychiatra-roznice.html">Psycholog, psychoterapeuta czy psychiatra?</a></li>
+            <li><a href="poradnik/jak-wyglada-konsultacja-psychologiczna-online.html">Jak wygląda konsultacja online?</a></li>
+            <li><a href="poradnik/czy-jedna-sesja-u-psychologa-moze-pomoc.html">Czy jedna sesja może pomóc?</a></li>
+            <li><a href="poradnik/natlok-mysli-przed-snem.html">Natłok myśli przed snem – 5 technik</a></li>
+            <li><a href="poradnik/kiedy-isc-do-psychologa.html">Kiedy iść do psychologa?</a></li>
+            <li><a href="poradnik/">Wszystkie artykuły</a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- foot-sitemap:end -->
       <div class="foot-grid">
         <span class="brand-logo" style="font-size: 2rem;">KK</span>
         

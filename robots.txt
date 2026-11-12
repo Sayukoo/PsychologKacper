@@ -1,0 +1,38 @@
+# psychologkacper.pl — Kacper Kulesza, psycholog (konsultacje online)
+# Strona jest otwarta dla wyszukiwarek i asystentów AI (wyszukiwanie i cytowanie).
+# Zablokowane: trenowanie modeli AI na treściach strony oraz katalogi robocze.
+
+User-agent: *
+Allow: /
+Disallow: /project/
+Disallow: /uploads/
+Disallow: /tools/
+
+# Wyszukiwanie i odpowiedzi na żywo — dozwolone.
+# OAI-SearchBot decyduje o obecności w wynikach wyszukiwania ChatGPT.
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: bingbot
+User-agent: Googlebot
+Allow: /
+Disallow: /project/
+Disallow: /uploads/
+Disallow: /tools/
+
+# Trenowanie modeli AI — brak zgody.
+# Te boty zbierają dane treningowe; ich blokada nie wpływa na widoczność
+# w wyszukiwarce ChatGPT, Google ani Bing.
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+User-agent: Meta-ExternalAgent
+User-agent: Bytespider
+Disallow: /
+
+Sitemap: https://psychologkacper.pl/sitemap.xml

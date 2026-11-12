@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Testy Psychologiczne Online – ASRS (ADHD), GAD-7, PHQ-9, WHO-5 | Kacper Kulesza</title>
+  <title>Testy psychologiczne online – ADHD, lęk, depresja | Kacper Kulesza</title>
   <meta name="description" content="Bezpłatne, anonimowe testy psychologiczne online: ASRS-v1.1 (ADHD u dorosłych), GAD-7 (lęk), PHQ-9 (depresja), WHO-5 (dobrostan). Wynik od razu na ekranie.">
+  <link rel="canonical" href="https://psychologkacper.pl/testy.html">
   
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -60,7 +61,35 @@
               "item": "https://psychologkacper.pl/testy.html"
             }
           ]
-        }
+        },
+        "author": {
+          "@type": "Person",
+          "@id": "https://psychologkacper.pl/#kacper",
+          "name": "Kacper Kulesza",
+          "jobTitle": "Psycholog"
+        },
+        "hasPart": [
+          {
+            "@type": "WebPage",
+            "name": "Test na depresję PHQ-9",
+            "url": "https://psychologkacper.pl/test-depresja-phq9.html"
+          },
+          {
+            "@type": "WebPage",
+            "name": "Test na lęk GAD-7",
+            "url": "https://psychologkacper.pl/test-lek-gad7.html"
+          },
+          {
+            "@type": "WebPage",
+            "name": "Test samopoczucia WHO-5",
+            "url": "https://psychologkacper.pl/test-dobrostan-who5.html"
+          },
+          {
+            "@type": "WebPage",
+            "name": "Test na ADHD u dorosłych (ASRS)",
+            "url": "https://psychologkacper.pl/test-adhd-asrs.html"
+          }
+        ]
       }
     ]
   }
@@ -70,7 +99,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=4.0">
 </head>
 <body style="min-height: 100vh; display: flex; flex-direction: column;">
 
@@ -84,12 +113,13 @@
         <span class="brand-logo">KK</span>
         <span class="brand-text">Kacper Kulesza <span class="dot">·</span> psycholog</span>
       </a>
-      <nav class="nav-links">
+      <nav class="nav-links" aria-label="Główna nawigacja">
         <a href="index.html#o-mnie" class="nav-link">O mnie</a>
+        <a href="index.html#w-czym-pomagam" class="nav-link">W czym pomagam</a>
         <a href="index.html#cennik" class="nav-link">Cennik</a>
-        <a href="materialy.html" class="nav-link">Materiały</a>
         <a href="testy.html" class="nav-link active">Testy</a>
-        <a href="index.html#faq" class="nav-link">FAQ</a>
+        <a href="poradnik/" class="nav-link">Poradnik</a>
+        <a href="materialy.html" class="nav-link">Materiały</a>
         <a href="kontakt.html" class="nav-link">Kontakt</a>
       </nav>
       <a href="https://calendly.com/kacperkulesza/15min" target="_blank" rel="noopener" class="btn-cta desktop-nav-cta">
@@ -119,7 +149,7 @@
       <button id="mobile-drawer-close" class="mobile-drawer-close" aria-label="Zamknij menu">✕</button>
     </div>
 
-    <nav class="mobile-nav-links">
+    <nav class="mobile-nav-links" aria-label="Nawigacja mobilna">
       <a href="index.html" class="mobile-nav-link">
         <span>Strona główna</span>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"></path></svg>
@@ -128,16 +158,24 @@
         <span>O mnie</span>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"></path></svg>
       </a>
+      <a href="index.html#w-czym-pomagam" class="mobile-nav-link">
+        <span>W czym pomagam</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"></path></svg>
+      </a>
       <a href="index.html#cennik" class="mobile-nav-link">
         <span>Cennik</span>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"></path></svg>
       </a>
-      <a href="materialy.html" class="mobile-nav-link">
-        <span>Darmowe materiały</span>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"></path></svg>
-      </a>
       <a href="testy.html" class="mobile-nav-link active">
         <span>Testy psychologiczne</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"></path></svg>
+      </a>
+      <a href="poradnik/" class="mobile-nav-link">
+        <span>Poradnik</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"></path></svg>
+      </a>
+      <a href="materialy.html" class="mobile-nav-link">
+        <span>Darmowe materiały</span>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"></path></svg>
       </a>
       <a href="index.html#faq" class="mobile-nav-link">
@@ -189,6 +227,34 @@
           Te testy nie stawiają diagnozy. Pokazują nasilenie objawów w ostatnich tygodniach i pomagają nazwać to, co czujesz. Diagnozę może postawić wyłącznie psycholog lub psychiatra po rozmowie z Tobą.
         </p>
       </div>
+
+      <!-- Statyczne opisy testów (czytelne bez JavaScriptu) -->
+      <section style="margin-top: 56px;">
+        <h2 style="font-size: 1.6rem;">Jak czytać wyniki</h2>
+        <p style="margin-top: 12px; max-width: 68ch;">Każdy kwestionariusz ma osobną stronę z opisem: co mierzy, jak liczy się punkty, co oznaczają przedziały wyników i co zrobić dalej.</p>
+        <div class="topic-grid" style="margin-top: 22px;">
+          <a href="test-depresja-phq9.html" class="test-preview-card">
+            <span class="test-card-tag">PHQ-9 · 9 pytań · 2 min</span>
+            <span class="test-card-title">Test na depresję PHQ-9</span>
+            <span class="topic-desc">Nastrój, sen, energia i koncentracja w ostatnich dwóch tygodniach. Wynik 0–27 punktów.</span>
+          </a>
+          <a href="test-lek-gad7.html" class="test-preview-card">
+            <span class="test-card-tag">GAD-7 · 7 pytań · 2 min</span>
+            <span class="test-card-title">Test na lęk GAD-7</span>
+            <span class="topic-desc">Niepokój, napięcie i zamartwianie się w ostatnich dwóch tygodniach. Wynik 0–21 punktów.</span>
+          </a>
+          <a href="test-dobrostan-who5.html" class="test-preview-card">
+            <span class="test-card-tag">WHO-5 · 5 pytań · 1 min</span>
+            <span class="test-card-title">Test samopoczucia WHO-5</span>
+            <span class="topic-desc">Ogólny dobrostan psychiczny. Wynik 0–25 punktów, poniżej 13 oznacza obniżone samopoczucie.</span>
+          </a>
+          <a href="test-adhd-asrs.html" class="test-preview-card">
+            <span class="test-card-tag">ASRS-v1.1 · 18 pytań · 3 min</span>
+            <span class="test-card-title">Test na ADHD u dorosłych (ASRS)</span>
+            <span class="topic-desc">Uwaga, organizacja, nadruchliwość i impulsywność w ostatnich sześciu miesiącach.</span>
+          </a>
+        </div>
+      </section>
     </div>
   </main>
 
@@ -213,6 +279,50 @@
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
+      <!-- foot-sitemap:start (generowane przez tools/build.py) -->
+      <nav class="foot-sitemap" aria-label="Mapa strony">
+        <div>
+          <h3>Konsultacje</h3>
+          <ul>
+            <li><a href="konsultacja-psychologiczna-online.html">Konsultacja psychologiczna online</a></li>
+            <li><a href="index.html#cennik">Cennik</a></li>
+            <li><a href="index.html#kontakt">Umów bezpłatne 15 minut</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>W czym pomagam</h3>
+          <ul>
+            <li><a href="natlok-mysli.html">Natłok myśli i zamartwianie się</a></li>
+            <li><a href="trudna-decyzja.html">Trudna decyzja</a></li>
+            <li><a href="wypalenie-zawodowe.html">Wypalenie zawodowe</a></li>
+            <li><a href="konflikt-w-pracy-i-relacji.html">Konflikt w pracy lub w relacji</a></li>
+            <li><a href="poczucie-utkniecia.html">Poczucie utknięcia</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Testy</h3>
+          <ul>
+            <li><a href="testy.html">Wszystkie testy</a></li>
+            <li><a href="test-depresja-phq9.html">Test na depresję PHQ-9</a></li>
+            <li><a href="test-lek-gad7.html">Test na lęk GAD-7</a></li>
+            <li><a href="test-dobrostan-who5.html">Test samopoczucia WHO-5</a></li>
+            <li><a href="test-adhd-asrs.html">Test na ADHD u dorosłych (ASRS)</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Poradnik</h3>
+          <ul>
+            <li><a href="poradnik/psycholog-psychoterapeuta-psychiatra-roznice.html">Psycholog, psychoterapeuta czy psychiatra?</a></li>
+            <li><a href="poradnik/jak-wyglada-konsultacja-psychologiczna-online.html">Jak wygląda konsultacja online?</a></li>
+            <li><a href="poradnik/czy-jedna-sesja-u-psychologa-moze-pomoc.html">Czy jedna sesja może pomóc?</a></li>
+            <li><a href="poradnik/natlok-mysli-przed-snem.html">Natłok myśli przed snem – 5 technik</a></li>
+            <li><a href="poradnik/kiedy-isc-do-psychologa.html">Kiedy iść do psychologa?</a></li>
+            <li><a href="poradnik/">Wszystkie artykuły</a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- foot-sitemap:end -->
       <div class="foot-grid">
         <span class="brand-logo" style="font-size: 2rem;">KK</span>
         
